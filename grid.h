@@ -10,6 +10,7 @@ public:
     void Print();
     void Draw();
     bool IsCellOutside(int row, int column);
+    bool IsCellEmpty(int row, int column);
     // 2d array of 20 rows, 10 cols
     int grid[20][10];
 

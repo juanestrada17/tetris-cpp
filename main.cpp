@@ -2,6 +2,19 @@
 #include <raylib.h>
 #include "game.h"
 
+double lastUpdateTime = 0; 
+
+bool EventTriggered(double interval)
+{
+    double currentTime = GetTime();
+    if(currentTime - lastUpdateTime >= interval)
+    {
+        lastUpdateTime = currentTime;
+        return true;
+    }
+    return false;
+}
+
 int main(int, char**){
 
     Color darkBlue = {44, 44, 127, 255};
@@ -18,6 +31,13 @@ int main(int, char**){
     {   
         BeginDrawing();
         game.HandleInput();
+        
+        // 200 miliseconds 
+        if(EventTriggered(0.2))
+        {
+            game.MoveBlockDown();
+        }
+
         ClearBackground(darkBlue);
         game.Draw();
         EndDrawing();
