@@ -8,3 +8,10 @@ Class name, declaration, etc...
 3. Vector = A container that can hold multiple values of the same data type. 
 * Add and remove elements
 * Resize itself
+
+4. Extern = Helps us declare in one file and use it in another 
+extern const Color darkGrey;
+
+* Representing blocks 
+Rotation State O (0,1) (1,0) (1,1) (1,2)
+Rotation State 1 (0,1) (1,1) (1,2) (2,1)

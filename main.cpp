@@ -1,6 +1,19 @@
 #include <iostream>
 #include <raylib.h>
-#include "grid.h"
+#include "game.h"
+
+double lastUpdateTime = 0; 
+
+bool EventTriggered(double interval)
+{
+    double currentTime = GetTime();
+    if(currentTime - lastUpdateTime >= interval)
+    {
+        lastUpdateTime = currentTime;
+        return true;
+    }
+    return false;
+}
 
 int main(int, char**){
 
@@ -10,17 +23,23 @@ int main(int, char**){
     SetTargetFPS(60);
 
     Grid grid = Grid();
-    grid.grid[0][0] = 1;
-    grid.grid[3][5] = 4;
-    grid.grid[17][8] = 7;
     grid.Print();
 
+    Game game = Game();
+
     while(!WindowShouldClose())
-    {
+    {   
         BeginDrawing();
-        ClearBackground(darkBlue);
-        grid.Draw();
+        game.HandleInput();
         
+        // 200 miliseconds 
+        if(EventTriggered(0.2))
+        {
+            game.MoveBlockDown();
+        }
+
+        ClearBackground(darkBlue);
+        game.Draw();
         EndDrawing();
     }
 
