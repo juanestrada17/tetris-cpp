@@ -11,6 +11,8 @@ public:
     // Represent each unique block
     void Draw();
     void Move(int rows, int columns);
+    void Rotate();
+    void UndoRotation();
     int id;
     std::vector <Position> GetCellPositions();
     // position of block using a map of vectors. <std::pair<int, int>
@@ -21,7 +23,4 @@ private:
     int rowOffset;
     int columnOffset;
     std::vector<Color> colors;
-
-
-
 };
