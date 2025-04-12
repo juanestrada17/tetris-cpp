@@ -44,7 +44,7 @@ void Grid::Draw()
             // DrawRectangle(x, y, w, h, color);
             // cellValue will be 0, using the first element in the vector.
             // + 1 and -1 to create some margin
-            DrawRectangle(column * cellSize + 1, row * cellSize + 1, cellSize -1 , cellSize -1, colors[cellValue]);
+            DrawRectangle(column * cellSize + 11, row * cellSize + 11, cellSize -1 , cellSize -1, colors[cellValue]);
             
         }
     }
