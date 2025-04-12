@@ -16,4 +16,11 @@ extern const Color darkGrey;
 Rotation State O (0,1) (1,0) (1,1) (1,2)
 Rotation State 1 (0,1) (1,1) (1,2) (2,1)
 
-Next Step = check for completion by checking if all rows are filled with blocks
+Scoring System = 
+
+100 points for a single line clear
+300 points for a double line clear
+500 points for a triple line clear 
+1 point for each move down by the player 
+
+
