@@ -15,3 +15,5 @@ extern const Color darkGrey;
 * Representing blocks 
 Rotation State O (0,1) (1,0) (1,1) (1,2)
 Rotation State 1 (0,1) (1,1) (1,2) (2,1)
+
+Next Step = check for completion by checking if all rows are filled with blocks

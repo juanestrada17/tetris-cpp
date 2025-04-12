@@ -109,6 +109,7 @@ void Game::LockBlock(){
     }
     currentBlock = nextBlock; 
     nextBlock = GetRandomBlock(); 
+    grid.ClearFullRows();
 }
 
 // Checks if the current position already has a tile.
