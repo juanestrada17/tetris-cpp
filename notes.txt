@@ -12,15 +12,3 @@ Class name, declaration, etc...
 4. Extern = Helps us declare in one file and use it in another 
 extern const Color darkGrey;
 
-* Representing blocks 
-Rotation State O (0,1) (1,0) (1,1) (1,2)
-Rotation State 1 (0,1) (1,1) (1,2) (2,1)
-
-Scoring System = 
-
-100 points for a single line clear
-300 points for a double line clear
-500 points for a triple line clear 
-1 point for each move down by the player 
-
-
