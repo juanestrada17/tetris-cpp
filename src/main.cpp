@@ -2,6 +2,8 @@
 #include <raylib.h>
 #include "game.h"
 #include "colors.h"
+#include <filesystem>
+
 double lastUpdateTime = 0; 
 
 bool EventTriggered(double interval)
@@ -16,6 +18,7 @@ bool EventTriggered(double interval)
 }
 
 int main(int, char**){
+    std::cout << "Current path: " << std::filesystem::current_path() << std::endl;
 
     // w / h 
     InitWindow(500, 620, "Raylib Tetris");
@@ -31,6 +34,7 @@ int main(int, char**){
 
     while(!WindowShouldClose())
     {   
+        UpdateMusicStream(game.music);
         BeginDrawing();
         game.HandleInput();
         
